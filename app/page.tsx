@@ -1,11 +1,13 @@
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import { Welcome } from '../components/Welcome/Welcome';
+import { HeaderSimple } from '../components/HeaderSimple/HeaderSimple';
+import { HeroContentLeft } from '../components/HeroContentLeft/HeroContentLeft';
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
+      <HeaderSimple/>
       <ColorSchemeToggle />
+      <HeroContentLeft/>
     </>
   );
 }
