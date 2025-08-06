@@ -18,7 +18,7 @@ export function GetInTouchSimple() {
   });
 
   return (
-    <form onSubmit={form.onSubmit(() => {})}>
+    <form onSubmit={form.onSubmit(() => {})} id="contact">
       <Title
         order={2}
         size="h1"

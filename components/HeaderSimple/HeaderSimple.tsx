@@ -3,12 +3,13 @@ import { useState } from 'react';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
+import { CustomSwitch } from '../CustomSwitch/CustomSwitch';
 
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { link: '/#about', label: 'About' },
+  { link: '/#experience', label: 'Experience' },
+  { link: '/#projects', label: 'Projects' },
+  { link: '/#contact', label: 'Contact' },
 ];
 
 export function HeaderSimple() {
@@ -21,8 +22,7 @@ export function HeaderSimple() {
       href={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
         setActive(link.link);
       }}
     >
@@ -36,7 +36,7 @@ export function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
+        <CustomSwitch/>
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
